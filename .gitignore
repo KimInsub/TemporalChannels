@@ -7,6 +7,7 @@
 *.m~
 *.asv
 my_*.m
+kis*.m
 figures/*
 !figures/readme_data.txt
 data/*
