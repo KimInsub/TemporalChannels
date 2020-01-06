@@ -12,3 +12,4 @@ figures/*
 data/*
 !data/readme_data.txt
 mine/*
+understand/*
