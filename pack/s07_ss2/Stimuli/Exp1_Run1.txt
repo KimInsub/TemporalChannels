@@ -1,0 +1,14 @@
+Exp1 conditions: 2s, 4s, 8s, 15s, 30s
+Run duration (s): 276
+
+Trial Condition Onset Duration Image
+1 30s 12 30 scrambled-746.jpg
+2 8s 54 8 scrambled-900.jpg
+3 2s 74 2 scrambled-281.jpg
+4 4s 88 4 scrambled-297.jpg
+5 15s 117 15 scrambled-158.jpg
+6 8s 157 8 scrambled-461.jpg
+7 15s 177 15 scrambled-513.jpg
+8 30s 204 30 scrambled-973.jpg
+9 2s 246 2 scrambled-1076.jpg
+10 4s 260 4 scrambled-347.jpg

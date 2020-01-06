@@ -50,6 +50,7 @@ classdef tchROI
     properties (Dependent)
         run_avgs   % average timecourse across voxels for each run
         trial_avgs % average timecourse across voxels for each trial type
+        raw_run_avg
     end
     
     properties (Dependent, Hidden)
@@ -120,12 +121,21 @@ classdef tchROI
             end
         end
         
+        
+        
         % average run time series across all voxels in each ROI
         function run_avgs = get.run_avgs(roi)
             run_avgs = cellfun(@(x) mean(x, 2), roi.runs, 'uni', false);
             empty_mats = cellfun(@isempty, run_avgs);
             run_avgs(empty_mats) = {[]};
         end
+        
+        function raw_run_avg = get.raw_run_avg(roi)
+            roi = select_sessions(roi); fpaths = roi.filenames;
+            raw_runs = cellfun(@(X) tch_load(X, 'tSeries'), fpaths, 'uni', false);
+            raw_run_avg = cellfun(@(X) mean(X,2), raw_runs, 'uni', false);
+        end
+        
         
         % average trial time series across all voxels in each ROI
         function trial_avgs = get.trial_avgs(roi)
