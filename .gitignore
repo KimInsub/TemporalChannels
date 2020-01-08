@@ -7,7 +7,7 @@
 *.m~
 *.asv
 my_*.m
-kis*.m
+pack/*
 figures/*
 !figures/readme_data.txt
 data/*
